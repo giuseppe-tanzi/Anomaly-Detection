@@ -18,7 +18,7 @@ model.hybridize()
 params_file = "./parameters/autoencoder_ucsd_convLSTMAE.params"
 
 # convolutional autoencoder with stacked frames and convolutional LSTMs (batch_size, 10, 227, 227)
-# model, params_file = convLSTMAE.train(model, batch_size, ctx, num_epochs, path=train_directory)
+# model, params_file = convLSTMAE.train(model, batch_size, ctx, num_epochs, path=train_directory, params_file=params_file)
 
 try:
     os.mkdir(output_test_directory)
