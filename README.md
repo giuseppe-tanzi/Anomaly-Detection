@@ -25,6 +25,7 @@ Il progetto è strutturato nel seguente modo:
 |    |–– Test035
 |–– parameters
 |    |–– autoencoder_ucsd_convLSTMAE.params
+|    |--UCSD_Anomaly_Dataset
 |–– .gitignore
 |-- convLSTMAE.py
 |-- Documentazione.pdf
@@ -38,6 +39,7 @@ Nel seguito si dettagliano i ruoli dei diversi componenti:
 
 - **output**: cartella in cui sono presenti i frame output dei 35 test con le anomalie evidenziate in rosso;
 - **parameters**: cartella in cui è presente il file *.params* salvato dopo aver completato il train della rete neurale;
+- **UCSD_Anomaly_Dataset**: dataset utilizzato per lo sviluppo del sistema
 - **main.py**: file sorgente utilizzato come main del progetto;
 - **convLSTMAE.py**: file sorgente utilizzato per definire la rete neurale e il corrispettivo train;
 - **utils.py** file sorgente utilizzato per definire la creazione del dataloader e del plot dei frame con le anomalie
@@ -56,11 +58,13 @@ Per eseguire il progetto è necessario installare i seguenti programmi:
 - `Pillow 8.2.0`
 - `Scipy 1.5.4`
 - `Numpy 1.16.6`
-- `SWI-Prolog 8.2.4`
 
 Se non si dispone di una GPU, cambiare alla riga 13 del file `main.py`, scrivendo `ctx = mx.cpu()` per poter effettuare
 il train con sola CPU.
 
 ## 4. Sviluppi Futuri
 
-
+In futuro, il sistema sviluppato potrà essere utilizzato in larga scala da più comuni e metropoli per l'identificazione
+di anomalie in zone pedonali ma anche in diversi contesti d'uso: un esempio consiste nel riallenare il software per le
+anomalie nelle strade urbane e extra-urbane. Per far ciò sarà necessario utilizzare un dataset diverso da quello
+utilizzato fino ad ora.
