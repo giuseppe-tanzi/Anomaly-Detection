@@ -58,6 +58,9 @@ Per eseguire il progetto è necessario installare i seguenti programmi:
 - `Pillow 8.2.0`
 - `Scipy 1.5.4`
 - `Numpy 1.16.6`
+
+Per eseguire il codice su GPU installare i seguenti programmi:
+
 - `Cuda 10.1`
 - `cudnn for Cuda 10.1 - v.7.6.5.32`
 
