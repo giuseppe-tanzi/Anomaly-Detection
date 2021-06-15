@@ -58,6 +58,8 @@ Per eseguire il progetto è necessario installare i seguenti programmi:
 - `Pillow 8.2.0`
 - `Scipy 1.5.4`
 - `Numpy 1.16.6`
+- `Cuda 10.1`
+- `cudnn for Cuda 10.1 - v.7.6.5.32`
 
 Se non si dispone di una GPU, cambiare alla riga 13 del file `main.py`, scrivendo `ctx = mx.cpu()` per poter effettuare
 il train con sola CPU.
