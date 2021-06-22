@@ -25,7 +25,7 @@ Il progetto è strutturato nel seguente modo:
 |    |–– Test035
 |–– parameters
 |    |–– autoencoder_ucsd_convLSTMAE.params
-|    |--UCSD_Anomaly_Dataset
+|--UCSD_Anomaly_Dataset
 |–– .gitignore
 |-- Documentazione.pdf
 |-- LICENSE
