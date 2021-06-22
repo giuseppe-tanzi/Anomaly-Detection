@@ -25,13 +25,13 @@ Il progetto è strutturato nel seguente modo:
 |    |–– Test035
 |–– parameters
 |    |–– autoencoder_ucsd_convLSTMAE.params
-|    |--UCSD_Anomaly_Dataset
+|--UCSD_Anomaly_Dataset
 |–– .gitignore
-|-- convLSTMAE.py
 |-- Documentazione.pdf
 |-- LICENSE
-|-- main.py
 |–– README.md
+|-- convLSTMAE.py
+|-- main.py
 |–– utils.py
 ```
 
@@ -66,6 +66,9 @@ Per eseguire il codice su GPU installare i seguenti programmi:
 
 Se non si dispone di una GPU, cambiare alla riga 13 del file `main.py`, scrivendo `ctx = mx.cpu()` per poter effettuare
 il train con sola CPU.
+
+Dopo aver configurato correttamente l’ambiente Python, è possibile avviare il codice presente in `main.py`. La `riga 21` è commentata per non dover riallenare la rete neurale, poiché i parametri della rete sono presenti nella cartella parameters.
+Quando sarà terminata l’esecuzione del codice `main.py` il sistema avrà creato una cartella output nella directory del progetto, in cui saranno presente 35 cartelle di Test, ognuna contenente 200 frame di singoli video con le relative anomalie evidenziate.
 
 ## 4. Sviluppi Futuri
 
