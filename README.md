@@ -27,11 +27,11 @@ Il progetto è strutturato nel seguente modo:
 |    |–– autoencoder_ucsd_convLSTMAE.params
 |    |--UCSD_Anomaly_Dataset
 |–– .gitignore
-|-- convLSTMAE.py
 |-- Documentazione.pdf
 |-- LICENSE
-|-- main.py
 |–– README.md
+|-- convLSTMAE.py
+|-- main.py
 |–– utils.py
 ```
 
