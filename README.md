@@ -1,19 +1,19 @@
 # Anomaly Detector for Pedestrian Areas
 
-## Indice
+## Table of Contents
 
-1. [Introduzione](#1-introduzione)
-2. [Struttura Progetto](#2-struttura-progetto)
-3. [Requisiti Per Eseguire Il Progetto](#3-requisiti-per-eseguire-il-progetto)
-4. [Sviluppi Futuri](#4-sviluppi-futuri)
+1. [Introduction](#1-introduction)
+2. [Project structure](#2-project-structure)
+3. [Requirements to run the project](#3-requirements-to-run-the-project)
+4. [Future Development](#4-future-developments)
 
-## 1. Introduzione
+## 1. Introduction
 
-Il progetto è stato creato per sostenere l'esame di *Modelli e Metodi per la Sicurezza delle Applicazioni*.
+The project was created to take the exam *Models and Methods for Application Security*.
 
-## 2. Struttura Progetto
+## 2. Project Structure
 
-Il progetto è strutturato nel seguente modo:
+The project is structured as follows:
 
 ```
 |–– output
@@ -35,22 +35,20 @@ Il progetto è strutturato nel seguente modo:
 |–– utils.py
 ```
 
-Nel seguito si dettagliano i ruoli dei diversi componenti:
+Below are the roles of the different components:
 
-- **output**: cartella in cui sono presenti i frame output dei 35 test con le anomalie evidenziate in rosso;
-- **parameters**: cartella in cui è presente il file *.params* salvato dopo aver completato il train della rete neurale;
-- **UCSD_Anomaly_Dataset**: dataset utilizzato per lo sviluppo del sistema
-- **main.py**: file sorgente utilizzato come main del progetto;
-- **convLSTMAE.py**: file sorgente utilizzato per definire la rete neurale e il corrispettivo train;
-- **utils.py** file sorgente utilizzato per definire la creazione del dataloader e del plot dei frame con le anomalie
-  evidenziate;
-- **.gitignore**: file che specifica tutti i file che devono essere esclusi dal sistema di controllo versione;
-- **Documentazione.pdf**: documentazione del caso di studio.
+- **output**: folder containing the output frames of the 35 tests with anomalies highlighted in red;
+- **parameters**: folder containing the .params file saved after completing the neural network training;
+- **UCSD_Anomaly_Dataset**: dataset used for system development;
+- **main.py**: source file used as the project's main file;
+- **convLSTMAE.py**: source file used to define the neural network and its training;
+- **utils.py**: source file used to define the creation of the dataloader and the plot of frames with highlighted anomalies;
+- **.gitignore**: file specifying all files to be excluded from the version control system;
+- **Documentation.pdf**: documentation of the case study.
 
-## 3. Requisiti Per Eseguire Il Progetto
+## 3. Requirements to run the project
 
-Per eseguire il progetto è necessario installare i seguenti programmi:
-
+To run the project, it is necessary to install the following programs:
 - `Python 3.6.0`
 - `Mxnet 1.6.0`
 - `Mxnet-cu101 1.5.0`
@@ -59,20 +57,14 @@ Per eseguire il progetto è necessario installare i seguenti programmi:
 - `Scipy 1.5.4`
 - `Numpy 1.16.6`
 
-Per eseguire il codice su GPU installare i seguenti programmi:
-
+To run the code on GPU, install the following programs:
 - `Cuda 10.1`
 - `cudnn for Cuda 10.1 - v.7.6.5.32`
 
-Se non si dispone di una GPU, cambiare alla riga 13 del file `main.py`, scrivendo `ctx = mx.cpu()` per poter effettuare
-il train con sola CPU.
+If you don't have a GPU, change line 13 of the `main.py` file to `ctx = mx.cpu()` in order to perform training with CPU only.
 
-Dopo aver configurato correttamente l’ambiente Python, è possibile avviare il codice presente in `main.py`. La `riga 21` è commentata per non dover riallenare la rete neurale, poiché i parametri della rete sono presenti nella cartella parameters.
-Quando sarà terminata l’esecuzione del codice `main.py` il sistema avrà creato una cartella output nella directory del progetto, in cui saranno presente 35 cartelle di Test, ognuna contenente 200 frame di singoli video con le relative anomalie evidenziate.
+After setting up the Python environment correctly, you can run the code in `main.py`. `Line 21` is commented out so that the neural network parameters in the parameters folder do not need to be retrained. When the execution of `main.py` is finished, the system will have created an output folder in the project directory, containing 35 Test folders, each with 200 frames of individual videos with their respective anomalies highlighted.
 
-## 4. Sviluppi Futuri
+## 4. Future Developments
 
-In futuro, il sistema sviluppato potrà essere utilizzato in larga scala da più comuni e metropoli per l'identificazione
-di anomalie in zone pedonali ma anche in diversi contesti d'uso: un esempio consiste nel riallenare il software per le
-anomalie nelle strade urbane e extra-urbane. Per far ciò sarà necessario utilizzare un dataset diverso da quello
-utilizzato fino ad ora.
+In the future, the developed system can be widely used by multiple cities and metropolises for identifying anomalies in pedestrian zones, as well as in various other contexts of use. One example is to retrain the software for anomalies in urban and rural roads. To do this, it will be necessary to use a different dataset from the one used so far.
