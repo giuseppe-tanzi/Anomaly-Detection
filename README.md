@@ -9,7 +9,7 @@
 
 ## 1. Introduction
 
-The project was created to take the exam *Models and Methods for Application Security*.
+The proposed system leverages autoencoder-based anomaly detection in pedestrian zones, detecting anomalies such as bikers, skaters, vans, etc. Utilizing the architecture developed by _Yong Shean Chong et al_., the algorithm enhances anomaly identification in surveillance video streams, employing Convolutional LSTM to analyze 10 frames simultaneously for improved detection of irregular patterns in pedestrian activities.
 
 ## 2. Project Structure
 
